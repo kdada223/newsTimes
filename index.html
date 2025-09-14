@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jun News</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <section class="container">
+    <nav>
+      <div class="topMenu">
+        <span style="font-size: 24px; cursor: pointer" onclick="openCloseNav('250px')"
+          class="hambugerNav">&#9776;</span>
+        <button class="main-search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        <div class="search-news-bar">
+          <div class="form-input">
+            <input type="text" name="" id="news-search" placeholder="검색어를 입력하시오" />
+            <button class="input-search-btn" onclick="getNewsByKeyword()">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="news-Title">
+        <a href="#">
+          <h1>The Jun News Times</h1>
+        </a>
+      </div>
+
+      <div class="menus">
+        <a href="javascript:void(0)" class="closebtn" onclick="openCloseNav('0')">&times;
+        </a>
+        <button>Business</button>
+        <button>Entertainment</button>
+        <button>General</button>
+        <button>Health</button>
+        <button>Science</button>
+        <button>Sports</button>
+        <button>Technology</button>
+      </div>
+    </nav>
+    <main id="news-board"></main>
+    <nav aria-label="Page navigation example" class="pageMoveCenter">
+      <ul class="pagination"></ul>
+    </nav>
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://kit.fontawesome.com/009860e372.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.0/moment.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
