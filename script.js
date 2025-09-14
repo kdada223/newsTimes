@@ -113,7 +113,7 @@ const paginationRender = () => {
 		lastpage = totalPages;
 	}
 	console.log(lastpage);
-	const firstpage = lastpage - (groupSize - 1) <= 0 ? 1 : lastpage - (groupSize - 1) <= 0;
+	const firstpage = lastpage - (groupSize - 1) <= 0 ? 1 : lastpage - (groupSize - 1);
 
 	let paginationHTML = `<li class="page-item " onclick='moveToPage(${firstpage})'>
       <a class="page-link start" href="#" aria-label="Previous">
