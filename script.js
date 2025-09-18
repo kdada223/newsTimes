@@ -68,7 +68,7 @@ const render = () => {
 			(news) => `<div class="row news">
           <div class="col-lg-4">
             <img
-              src=${news.urlToImage ? news.urlToImage : '../Assets/IMG/noPhoto.jpg'} 
+              src=${news.urlToImage ? news.urlToImage : 'noPhoto.jpg'} 
               alt="..."
               class="news-img-size" 
             />
@@ -85,7 +85,7 @@ const render = () => {
 									: '내용없음'
 							}
             </p>
-            <div>${news.source.name ? news.source.name : 'no source'} * ${moment().startOf('day').fromNow()};       
+            <div>${news.source.name ? news.source.name : 'no source'} *  ${news.publishedAt ? moment(news.publishedAt).fromNow() : ''};       
 						
 						</div>
           </div>
