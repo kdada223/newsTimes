@@ -52,6 +52,7 @@ const getNewsByCategory = async (event) => {
 	const category = event.target.textContent.toLowerCase();
 	// url = new URL(`https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${API_KEY}`);
 	url = new URL(`https://noona-times-be-5ca9402f90d9.herokuapp.com/top-headlines?country=kr&category=${category}&apiKey=${API_KEY}`);
+	page = 1;
 	getNews();
 };
 
@@ -59,6 +60,7 @@ const getNewsByKeyword = async () => {
 	const keyword = document.getElementById('news-search').value;
 	// url = new URL(`https://newsapi.org/v2/top-headlines?country=us&q=${keyword}&apiKey=${API_KEY}`);
 	url = new URL(`https://noona-times-be-5ca9402f90d9.herokuapp.com/top-headlines?country=kr&q=${keyword}&apiKey=${API_KEY}`);
+	page = 1; 
 	getNews();
 };
 
